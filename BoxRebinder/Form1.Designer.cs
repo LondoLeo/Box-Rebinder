@@ -80,6 +80,20 @@
             this.bttnLoad = new System.Windows.Forms.Button();
             this.ofdLoadConfig = new System.Windows.Forms.OpenFileDialog();
             this.sfdSaveConfig = new System.Windows.Forms.SaveFileDialog();
+            this.numX1 = new System.Windows.Forms.NumericUpDown();
+            this.numY1 = new System.Windows.Forms.NumericUpDown();
+            this.numX2 = new System.Windows.Forms.NumericUpDown();
+            this.numY2 = new System.Windows.Forms.NumericUpDown();
+            this.numTilt = new System.Windows.Forms.NumericUpDown();
+            this.lblX1 = new System.Windows.Forms.Label();
+            this.lblY1 = new System.Windows.Forms.Label();
+            this.lblX2 = new System.Windows.Forms.Label();
+            this.lblY2 = new System.Windows.Forms.Label();
+            this.lblTilt = new System.Windows.Forms.Label();
+            this.cbSwitchDir = new System.Windows.Forms.CheckBox();
+            this.grpOptions = new System.Windows.Forms.GroupBox();
+            this.lblSocd = new System.Windows.Forms.Label();
+            this.numSocd = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pb_27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_25)).BeginInit();
@@ -103,6 +117,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numY1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numX2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numY2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTilt)).BeginInit();
+            this.grpOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSocd)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_27
@@ -621,7 +642,7 @@
             // 
             // bttnSave
             // 
-            this.bttnSave.Location = new System.Drawing.Point(707, 444);
+            this.bttnSave.Location = new System.Drawing.Point(707, 476);
             this.bttnSave.Name = "bttnSave";
             this.bttnSave.Size = new System.Drawing.Size(81, 37);
             this.bttnSave.TabIndex = 47;
@@ -631,7 +652,7 @@
             // 
             // bttnLoad
             // 
-            this.bttnLoad.Location = new System.Drawing.Point(707, 416);
+            this.bttnLoad.Location = new System.Drawing.Point(707, 443);
             this.bttnLoad.Name = "bttnLoad";
             this.bttnLoad.Size = new System.Drawing.Size(81, 22);
             this.bttnLoad.TabIndex = 48;
@@ -650,11 +671,140 @@
             this.sfdSaveConfig.Filter = "JSON Files|.json";
             this.sfdSaveConfig.OverwritePrompt = false;
             // 
+            // numX1
+            // 
+            this.numX1.Location = new System.Drawing.Point(92, 15);
+            this.numX1.Name = "numX1";
+            this.numX1.Size = new System.Drawing.Size(42, 20);
+            this.numX1.TabIndex = 49;
+            // 
+            // numY1
+            // 
+            this.numY1.Location = new System.Drawing.Point(92, 41);
+            this.numY1.Name = "numY1";
+            this.numY1.Size = new System.Drawing.Size(42, 20);
+            this.numY1.TabIndex = 50;
+            // 
+            // numX2
+            // 
+            this.numX2.Location = new System.Drawing.Point(92, 67);
+            this.numX2.Name = "numX2";
+            this.numX2.Size = new System.Drawing.Size(42, 20);
+            this.numX2.TabIndex = 51;
+            // 
+            // numY2
+            // 
+            this.numY2.Location = new System.Drawing.Point(92, 93);
+            this.numY2.Name = "numY2";
+            this.numY2.Size = new System.Drawing.Size(42, 20);
+            this.numY2.TabIndex = 52;
+            // 
+            // numTilt
+            // 
+            this.numTilt.Location = new System.Drawing.Point(92, 119);
+            this.numTilt.Name = "numTilt";
+            this.numTilt.Size = new System.Drawing.Size(42, 20);
+            this.numTilt.TabIndex = 53;
+            // 
+            // lblX1
+            // 
+            this.lblX1.AutoSize = true;
+            this.lblX1.Location = new System.Drawing.Point(7, 17);
+            this.lblX1.Name = "lblX1";
+            this.lblX1.Size = new System.Drawing.Size(50, 13);
+            this.lblX1.TabIndex = 54;
+            this.lblX1.Text = "X1 Value";
+            // 
+            // lblY1
+            // 
+            this.lblY1.AutoSize = true;
+            this.lblY1.Location = new System.Drawing.Point(6, 43);
+            this.lblY1.Name = "lblY1";
+            this.lblY1.Size = new System.Drawing.Size(50, 13);
+            this.lblY1.TabIndex = 55;
+            this.lblY1.Text = "Y1 Value";
+            // 
+            // lblX2
+            // 
+            this.lblX2.AutoSize = true;
+            this.lblX2.Location = new System.Drawing.Point(7, 69);
+            this.lblX2.Name = "lblX2";
+            this.lblX2.Size = new System.Drawing.Size(50, 13);
+            this.lblX2.TabIndex = 56;
+            this.lblX2.Text = "X2 Value";
+            // 
+            // lblY2
+            // 
+            this.lblY2.AutoSize = true;
+            this.lblY2.Location = new System.Drawing.Point(6, 95);
+            this.lblY2.Name = "lblY2";
+            this.lblY2.Size = new System.Drawing.Size(50, 13);
+            this.lblY2.TabIndex = 57;
+            this.lblY2.Text = "Y2 Value";
+            // 
+            // lblTilt
+            // 
+            this.lblTilt.AutoSize = true;
+            this.lblTilt.Location = new System.Drawing.Point(6, 121);
+            this.lblTilt.Name = "lblTilt";
+            this.lblTilt.Size = new System.Drawing.Size(51, 13);
+            this.lblTilt.TabIndex = 58;
+            this.lblTilt.Text = "Tilt Value";
+            // 
+            // cbSwitchDir
+            // 
+            this.cbSwitchDir.AutoSize = true;
+            this.cbSwitchDir.Location = new System.Drawing.Point(9, 171);
+            this.cbSwitchDir.Name = "cbSwitchDir";
+            this.cbSwitchDir.Size = new System.Drawing.Size(126, 17);
+            this.cbSwitchDir.TabIndex = 60;
+            this.cbSwitchDir.Text = "Switch For Directions";
+            this.cbSwitchDir.UseVisualStyleBackColor = true;
+            // 
+            // grpOptions
+            // 
+            this.grpOptions.Controls.Add(this.numSocd);
+            this.grpOptions.Controls.Add(this.lblSocd);
+            this.grpOptions.Controls.Add(this.lblX1);
+            this.grpOptions.Controls.Add(this.cbSwitchDir);
+            this.grpOptions.Controls.Add(this.lblY1);
+            this.grpOptions.Controls.Add(this.lblTilt);
+            this.grpOptions.Controls.Add(this.numX1);
+            this.grpOptions.Controls.Add(this.numTilt);
+            this.grpOptions.Controls.Add(this.lblY2);
+            this.grpOptions.Controls.Add(this.numY1);
+            this.grpOptions.Controls.Add(this.lblX2);
+            this.grpOptions.Controls.Add(this.numY2);
+            this.grpOptions.Controls.Add(this.numX2);
+            this.grpOptions.Location = new System.Drawing.Point(5, 320);
+            this.grpOptions.Name = "grpOptions";
+            this.grpOptions.Size = new System.Drawing.Size(150, 193);
+            this.grpOptions.TabIndex = 61;
+            this.grpOptions.TabStop = false;
+            this.grpOptions.Text = "Additional Options";
+            // 
+            // lblSocd
+            // 
+            this.lblSocd.AutoSize = true;
+            this.lblSocd.Location = new System.Drawing.Point(6, 147);
+            this.lblSocd.Name = "lblSocd";
+            this.lblSocd.Size = new System.Drawing.Size(60, 13);
+            this.lblSocd.TabIndex = 61;
+            this.lblSocd.Text = "socd Mode";
+            // 
+            // numSocd
+            // 
+            this.numSocd.Location = new System.Drawing.Point(92, 145);
+            this.numSocd.Name = "numSocd";
+            this.numSocd.Size = new System.Drawing.Size(42, 20);
+            this.numSocd.TabIndex = 62;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 493);
+            this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.grpOptions);
             this.Controls.Add(this.bttnLoad);
             this.Controls.Add(this.bttnSave);
             this.Controls.Add(this.label_13);
@@ -705,6 +855,7 @@
             this.Controls.Add(this.pb_22);
             this.Controls.Add(this.pb_27);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pb_27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_22)).EndInit();
@@ -729,6 +880,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numY1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numX2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numY2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTilt)).EndInit();
+            this.grpOptions.ResumeLayout(false);
+            this.grpOptions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSocd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -787,6 +946,20 @@
         private System.Windows.Forms.Button bttnLoad;
         private System.Windows.Forms.OpenFileDialog ofdLoadConfig;
         private System.Windows.Forms.SaveFileDialog sfdSaveConfig;
+        private System.Windows.Forms.NumericUpDown numX1;
+        private System.Windows.Forms.NumericUpDown numY1;
+        private System.Windows.Forms.NumericUpDown numX2;
+        private System.Windows.Forms.NumericUpDown numY2;
+        private System.Windows.Forms.NumericUpDown numTilt;
+        private System.Windows.Forms.Label lblX1;
+        private System.Windows.Forms.Label lblY1;
+        private System.Windows.Forms.Label lblX2;
+        private System.Windows.Forms.Label lblY2;
+        private System.Windows.Forms.Label lblTilt;
+        private System.Windows.Forms.CheckBox cbSwitchDir;
+        private System.Windows.Forms.GroupBox grpOptions;
+        private System.Windows.Forms.NumericUpDown numSocd;
+        private System.Windows.Forms.Label lblSocd;
     }
 }
 
