@@ -124,4 +124,7 @@
   <data name="Circle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Circle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Circle3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Circle3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
