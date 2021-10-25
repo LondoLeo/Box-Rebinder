@@ -13,25 +13,52 @@ using System.Reflection;
 
 namespace BoxRebinder
 {
-    public partial class Form1 : Form
+    public partial class BoxRebinderForm : Form
     {
         string load_path;
         Configs configs;
         Dictionary<PictureBox, string> pbMap;
         List<PictureBox> pbList;
-        Bitmap circleClear = new Bitmap(Properties.Resources.Circle);
-        Bitmap circleSelected = new Bitmap(Properties.Resources.Circle2);
-        Bitmap circleHovered = new Bitmap(Properties.Resources.Circle3);
+        Bitmap circleClear = Properties.Resources.Circle;
+        Bitmap circleSelected = Properties.Resources.Circle2;
+        Bitmap circleHovered = Properties.Resources.Circle3;
 
 
-        bool loaded;
+        bool _loaded;
         PictureBox lastBox;
 
-        public Form1()
+        Dictionary<string, Bitmap> colorMap = new Dictionary<string, Bitmap>()
+        {
+            {"A", Properties.Resources.Circle_Green },
+            {"B", Properties.Resources.Circle_Red },
+            {"Z", Properties.Resources.Circle_Purple },
+            {"CUp", Properties.Resources.Circle_Orange },
+            {"CDown", Properties.Resources.Circle_Orange },
+            {"CLeft", Properties.Resources.Circle_Orange },
+            {"CRight", Properties.Resources.Circle_Orange },
+            {"DUp", Properties.Resources.Circle_LightGray },
+            {"DDown", Properties.Resources.Circle_LightGray },
+            {"DLeft", Properties.Resources.Circle_LightGray },
+            {"DRight", Properties.Resources.Circle_LightGray },
+            {"Up", Properties.Resources.Circle_White },
+            {"Left", Properties.Resources.Circle_White },
+            {"Down", Properties.Resources.Circle_White },
+            {"Right", Properties.Resources.Circle_White },
+            {"Tilt" , Properties.Resources.Circle_Gray },
+            {"Switch" , Properties.Resources.Circle_Gray },
+            {"Light" , Properties.Resources.Circle_LightGray },
+            {"L" , Properties.Resources.Circle_LightGray },
+            {"R" , Properties.Resources.Circle_LightGray },
+            {"Start" , Properties.Resources.Circle },
+            {"X", Properties.Resources.Circle_FaintBlue },
+            {"Y", Properties.Resources.Circle_FaintBlue }
+        };
+
+        public BoxRebinderForm()
         {
             InitializeComponent();
 
-            loaded = false;
+            _loaded = false;
             this.Activate();
         }
 
@@ -50,7 +77,7 @@ namespace BoxRebinder
             }
             LoadUI();
 
-            loaded = true;
+            _loaded = true;
         }
 
         private void LoadConfigs()
@@ -132,7 +159,7 @@ namespace BoxRebinder
 
         private void pb_Click(object sender, EventArgs e)
         {
-            if (!loaded) return;
+            if (!_loaded) return;
 
             PictureBox senderBox = sender as PictureBox;
             if (lastBox == null)
@@ -160,37 +187,47 @@ namespace BoxRebinder
 
         private void pb_Paint(object sender, PaintEventArgs e)
         {
-            if (!loaded) return;
+            if (!_loaded) return;
 
             PictureBox pb = sender as PictureBox;
 
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Center;
             sf.LineAlignment = StringAlignment.Center;
-            Font font = new Font(FontFamily.GenericSansSerif, 12);
+            Font font = new Font("Arial", 12, FontStyle.Bold);
             Brush brush = Brushes.Black;
 
             bool res = pbMap.TryGetValue(pb, out string text);
             if (!res) return;
 
+            if (text.Length > 6)
+            {
+                text = text.Remove(5);
+            }
+
             SizeF f = e.Graphics.MeasureString(text, font);
             float newSize = font.Size;
             int max_width = 45;
             int max_height = 45;
-            while(f.Width > max_width || f.Height > max_height)
+            while (f.Width > max_width || f.Height > max_height)
             {
                 newSize--;
-                font = new Font(FontFamily.GenericSansSerif, newSize);
+                font = new Font(font.FontFamily, newSize, font.Style);
                 f = e.Graphics.MeasureString(text, font);
             }
 
+            if(text == "Z")
+            {
+                brush = Brushes.LightGray;
+            }
 
+            pb.BackgroundImage = colorMap[text];
             e.Graphics.DrawString(text, font, brush, new Point(32, 32), sf);
         }
 
         private void bttnSave_Click(object sender, EventArgs e)
         {
-            if (!loaded)
+            if (!_loaded)
             {
                 MessageBox.Show("Can't save a blank configuration.\nLoad a file first.");
                 return;
@@ -211,15 +248,14 @@ namespace BoxRebinder
 
             LoadFile(ofdLoadConfig.FileName);
         }
+
         private void pb_MouseEnter(object sender, EventArgs e)
         {
-            PictureBox pb = sender as PictureBox;
-            pb.BackgroundImage = circleHovered;
+
         }
         private void pb_MouseLeave(object sender, EventArgs e)
         {
-            PictureBox pb = sender as PictureBox;
-            pb.BackgroundImage = circleClear;
+
         }
     }
 }

@@ -93,5 +93,29 @@
   <ItemGroup>
     <None Include="Images\Circle3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_LightGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_Purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Circle_FaintBlue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

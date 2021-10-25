@@ -1,6 +1,6 @@
 ﻿namespace BoxRebinder
 {
-    partial class Form1
+    partial class BoxRebinderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoxRebinderForm));
             this.pb_27 = new System.Windows.Forms.PictureBox();
             this.pb_22 = new System.Windows.Forms.PictureBox();
             this.pb_25 = new System.Windows.Forms.PictureBox();
@@ -466,35 +466,40 @@
             // 
             // numX1
             // 
-            this.numX1.Location = new System.Drawing.Point(92, 15);
+            this.numX1.BackColor = System.Drawing.SystemColors.Menu;
+            this.numX1.Location = new System.Drawing.Point(92, 26);
             this.numX1.Name = "numX1";
             this.numX1.Size = new System.Drawing.Size(42, 20);
             this.numX1.TabIndex = 49;
             // 
             // numY1
             // 
-            this.numY1.Location = new System.Drawing.Point(92, 41);
+            this.numY1.BackColor = System.Drawing.SystemColors.Menu;
+            this.numY1.Location = new System.Drawing.Point(92, 53);
             this.numY1.Name = "numY1";
             this.numY1.Size = new System.Drawing.Size(42, 20);
             this.numY1.TabIndex = 50;
             // 
             // numX2
             // 
-            this.numX2.Location = new System.Drawing.Point(92, 67);
+            this.numX2.BackColor = System.Drawing.SystemColors.Menu;
+            this.numX2.Location = new System.Drawing.Point(92, 79);
             this.numX2.Name = "numX2";
             this.numX2.Size = new System.Drawing.Size(42, 20);
             this.numX2.TabIndex = 51;
             // 
             // numY2
             // 
-            this.numY2.Location = new System.Drawing.Point(92, 93);
+            this.numY2.BackColor = System.Drawing.SystemColors.Menu;
+            this.numY2.Location = new System.Drawing.Point(92, 105);
             this.numY2.Name = "numY2";
             this.numY2.Size = new System.Drawing.Size(42, 20);
             this.numY2.TabIndex = 52;
             // 
             // numTilt
             // 
-            this.numTilt.Location = new System.Drawing.Point(92, 119);
+            this.numTilt.BackColor = System.Drawing.SystemColors.Menu;
+            this.numTilt.Location = new System.Drawing.Point(92, 131);
             this.numTilt.Name = "numTilt";
             this.numTilt.Size = new System.Drawing.Size(42, 20);
             this.numTilt.TabIndex = 53;
@@ -502,7 +507,7 @@
             // lblX1
             // 
             this.lblX1.AutoSize = true;
-            this.lblX1.Location = new System.Drawing.Point(7, 17);
+            this.lblX1.Location = new System.Drawing.Point(6, 28);
             this.lblX1.Name = "lblX1";
             this.lblX1.Size = new System.Drawing.Size(50, 13);
             this.lblX1.TabIndex = 54;
@@ -511,7 +516,7 @@
             // lblY1
             // 
             this.lblY1.AutoSize = true;
-            this.lblY1.Location = new System.Drawing.Point(6, 43);
+            this.lblY1.Location = new System.Drawing.Point(6, 55);
             this.lblY1.Name = "lblY1";
             this.lblY1.Size = new System.Drawing.Size(50, 13);
             this.lblY1.TabIndex = 55;
@@ -520,7 +525,7 @@
             // lblX2
             // 
             this.lblX2.AutoSize = true;
-            this.lblX2.Location = new System.Drawing.Point(7, 69);
+            this.lblX2.Location = new System.Drawing.Point(7, 81);
             this.lblX2.Name = "lblX2";
             this.lblX2.Size = new System.Drawing.Size(50, 13);
             this.lblX2.TabIndex = 56;
@@ -529,7 +534,7 @@
             // lblY2
             // 
             this.lblY2.AutoSize = true;
-            this.lblY2.Location = new System.Drawing.Point(6, 95);
+            this.lblY2.Location = new System.Drawing.Point(7, 107);
             this.lblY2.Name = "lblY2";
             this.lblY2.Size = new System.Drawing.Size(50, 13);
             this.lblY2.TabIndex = 57;
@@ -538,7 +543,7 @@
             // lblTilt
             // 
             this.lblTilt.AutoSize = true;
-            this.lblTilt.Location = new System.Drawing.Point(6, 121);
+            this.lblTilt.Location = new System.Drawing.Point(6, 133);
             this.lblTilt.Name = "lblTilt";
             this.lblTilt.Size = new System.Drawing.Size(51, 13);
             this.lblTilt.TabIndex = 58;
@@ -547,7 +552,7 @@
             // cbSwitchDir
             // 
             this.cbSwitchDir.AutoSize = true;
-            this.cbSwitchDir.Location = new System.Drawing.Point(9, 171);
+            this.cbSwitchDir.Location = new System.Drawing.Point(6, 184);
             this.cbSwitchDir.Name = "cbSwitchDir";
             this.cbSwitchDir.Size = new System.Drawing.Size(126, 17);
             this.cbSwitchDir.TabIndex = 60;
@@ -569,16 +574,17 @@
             this.grpOptions.Controls.Add(this.lblX2);
             this.grpOptions.Controls.Add(this.numY2);
             this.grpOptions.Controls.Add(this.numX2);
-            this.grpOptions.Location = new System.Drawing.Point(5, 320);
+            this.grpOptions.Location = new System.Drawing.Point(5, 308);
             this.grpOptions.Name = "grpOptions";
-            this.grpOptions.Size = new System.Drawing.Size(150, 193);
+            this.grpOptions.Size = new System.Drawing.Size(150, 205);
             this.grpOptions.TabIndex = 61;
             this.grpOptions.TabStop = false;
             this.grpOptions.Text = "Additional Options";
             // 
             // numSocd
             // 
-            this.numSocd.Location = new System.Drawing.Point(92, 145);
+            this.numSocd.BackColor = System.Drawing.SystemColors.Menu;
+            this.numSocd.Location = new System.Drawing.Point(92, 157);
             this.numSocd.Name = "numSocd";
             this.numSocd.Size = new System.Drawing.Size(42, 20);
             this.numSocd.TabIndex = 62;
@@ -586,16 +592,17 @@
             // lblSocd
             // 
             this.lblSocd.AutoSize = true;
-            this.lblSocd.Location = new System.Drawing.Point(6, 147);
+            this.lblSocd.Location = new System.Drawing.Point(6, 159);
             this.lblSocd.Name = "lblSocd";
             this.lblSocd.Size = new System.Drawing.Size(60, 13);
             this.lblSocd.TabIndex = 61;
             this.lblSocd.Text = "socd Mode";
             // 
-            // Form1
+            // BoxRebinderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(800, 525);
             this.Controls.Add(this.grpOptions);
             this.Controls.Add(this.bttnLoad);
@@ -624,9 +631,10 @@
             this.Controls.Add(this.pb_25);
             this.Controls.Add(this.pb_22);
             this.Controls.Add(this.pb_27);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "BoxRebinderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Box Rebinder";
             ((System.ComponentModel.ISupportInitialize)(this.pb_27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_25)).EndInit();
