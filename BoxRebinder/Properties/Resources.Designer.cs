@@ -169,5 +169,33 @@ namespace BoxRebinder.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;configurations&quot;: [
+        ///        {
+        ///            &quot;name&quot;: &quot;firstConfig&quot;,
+        ///            &quot;combinationArraySize&quot;: 0,
+        ///            &quot;combination&quot;: &quot;&quot;,
+        ///            &quot;pinA&quot;: 2,
+        ///            &quot;pinB&quot;: 1,
+        ///            &quot;pinX&quot;: 3,
+        ///            &quot;pinY&quot;: 4,
+        ///            &quot;pinL&quot;: 5,
+        ///            &quot;pinR&quot;: 12,
+        ///            &quot;pinZ&quot;: 13,
+        ///            &quot;pinStart&quot;: 14,
+        ///            &quot;pinUp&quot;: 15,
+        ///            &quot;pinDown&quot;: 16,
+        ///            &quot;pinLeft&quot;: 17,
+        ///            &quot;pinRight&quot;: 18,
+        ///            &quot;pinCUp&quot;: 21,
+        ///            &quot;pinCDown&quot;: 22,        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DefaultConfig {
+            get {
+                return ResourceManager.GetString("DefaultConfig", resourceCulture);
+            }
+        }
     }
 }

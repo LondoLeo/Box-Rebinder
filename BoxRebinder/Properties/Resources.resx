@@ -151,4 +151,80 @@
   <data name="Circle_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Circle_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DefaultConfig" xml:space="preserve">
+    <value>{
+    "configurations": [
+        {
+            "name": "firstConfig",
+            "combinationArraySize": 0,
+            "combination": "",
+            "pinA": 2,
+            "pinB": 1,
+            "pinX": 3,
+            "pinY": 4,
+            "pinL": 5,
+            "pinR": 12,
+            "pinZ": 13,
+            "pinStart": 14,
+            "pinUp": 15,
+            "pinDown": 16,
+            "pinLeft": 17,
+            "pinRight": 18,
+            "pinCUp": 21,
+            "pinCDown": 22,
+            "pinCLeft": 23,
+            "pinCRight": 25,
+            "pinSwitch": 26,
+            "pinTilt": 27,
+            "pinDUp": 33,
+            "pinDDown": 34,
+            "pinDLeft": 35,
+            "pinDRight": 36,
+            "pinLightShield": 32,
+            "tiltValue": 80,
+            "x1Value": 42,
+            "x2Value": 70,
+            "y1Value": 42,
+            "y2Value": 70,
+            "socdMode": 2,
+            "switchForDirections": true
+        },
+        {
+            "name": "secondConfig",
+            "combinationArraySize": 1,
+            "combination": "3",
+            "pinA": 2,
+            "pinB": 1,
+            "pinX": 3,
+            "pinY": 4,
+            "pinL": 5,
+            "pinR": 12,
+            "pinZ": 13,
+            "pinStart": 14,
+            "pinUp": 15,
+            "pinDown": 16,
+            "pinLeft": 17,
+            "pinRight": 18,
+            "pinCUp": 21,
+            "pinCDown": 22,
+            "pinCLeft": 23,
+            "pinCRight": 25,
+            "pinSwitch": 26,
+            "pinTilt": 27,
+            "pinDUp": 33,
+            "pinDDown": 34,
+            "pinDLeft": 35,
+            "pinDRight": 36,
+            "pinLightShield": 32,
+            "tiltValue": 80,
+            "x1Value": 42,
+            "x2Value": 70,
+            "y1Value": 42,
+            "y2Value": 70,
+            "socdMode": 0,
+            "switchForDirections": false
+        }
+    ]
+}</value>
+  </data>
 </root>

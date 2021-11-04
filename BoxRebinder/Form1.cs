@@ -24,6 +24,7 @@ namespace BoxRebinder
         Bitmap circleHovered = Properties.Resources.Circle3;
 
 
+
         bool _loaded;
         PictureBox lastBox;
 
@@ -60,16 +61,18 @@ namespace BoxRebinder
 
             _loaded = false;
             this.Activate();
+
+            LoadDefault();
         }
 
-        private void LoadFile(string path)
+        private void LoadFromFile(string path)
         {
             load_path = path;
 
             pbList = new List<PictureBox>();
             pbMap = new Dictionary<PictureBox, string>();
 
-            LoadConfigs();
+            LoadConfigsFromFile();
             FindPBs();
             foreach (Config config in configs.configurations)
             {
@@ -80,9 +83,37 @@ namespace BoxRebinder
             _loaded = true;
         }
 
-        private void LoadConfigs()
+        private void LoadDefault()
+        {
+            pbList = new List<PictureBox>();
+            pbMap = new Dictionary<PictureBox, string>();
+
+            LoadConfigDefault();
+            FindPBs();
+            foreach (Config config in configs.configurations)
+            {
+                config.Connect();
+            }
+            LoadUI();
+
+            _loaded = true;
+        }
+
+        private void LoadConfigsFromFile()
         {
             string configFileContent = File.ReadAllText(load_path);
+            configs = JsonConvert.DeserializeObject<Configs>(configFileContent);
+
+            foreach (Config config in configs.configurations)
+            {
+                cboConfigs.Items.Add(config.name);
+            }
+            cboConfigs.Text = cboConfigs.Items[0] as string;
+        }
+
+        private void LoadConfigDefault ()
+        {
+            string configFileContent = Properties.Resources.DefaultConfig;
             configs = JsonConvert.DeserializeObject<Configs>(configFileContent);
 
             foreach (Config config in configs.configurations)
@@ -246,7 +277,7 @@ namespace BoxRebinder
                 return;
             }
 
-            LoadFile(ofdLoadConfig.FileName);
+            LoadFromFile(ofdLoadConfig.FileName);
         }
 
         private void pb_MouseEnter(object sender, EventArgs e)
